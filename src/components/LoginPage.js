@@ -8,10 +8,10 @@ import {CgProfile} from 'react-icons/cg'
 const LoginPage = () => {
     return (
         <div>
-            <header className='text-start p-5 mb-5 bg-primary text-light'>
+            {/* <header className='text-start p-5 mb-5 bg-primary text-light'>
                 <h1>Connexion</h1>
                 <h3>Accueil / Connexion</h3>
-            </header>
+            </header> */}
             <section>
                 <h3 className='text-primary fw-bolder fs-2'>Connexion</h3>
                 <div className='m-5 p-5 row justify-content-center bg-primary'>
