@@ -15,38 +15,37 @@ const LoginPage = () => {
 
             {/* Connexion Form */}
             <section>
-                <h3 className='text-primary fw-bolder fs-2'>Connexion</h3>
-                <div className='m-5 p-5 row justify-content-center bg-primary'>
+                {/* <h3 className='text-primary fw-bolder fs-2'>Connexion</h3> */}
+                <div className='mx-md-5 m-2 p-2 row justify-content-center bg-primary'>
                     <div className='row col-6 col-sm-4 col-md-3 col-lg-2 m-auto'>
                         <img src={login_logo}></img>
                     </div>
-                    <h1 className='text-light my-4'>Login</h1>
-                    <div className='col-7'>
-                        <form >
+                    <h2 className='text-light '>Connexion</h2>
+                    <div className='col-12 col-sm-9 col-md-7 col-lg-5'>
+                        <form className='col-10 m-auto'>
                             <div className='input-group form-control justify-content-center my3'>
-                                <CgProfile className='fs-1 my-2 me-2'/>
-                                <input type="text" className="form-control fs-3" placeholder="N° d'identification"></input>
+                                <CgProfile className='fs-3 my-2 me-2'/>
+                                <input type="text" className="form-control fs-5" placeholder="N° d'identification"></input>
                             </div>
                             <div className='input-group form-control justify-content-center my-3'>
-                                <AiIcons.AiFillLock className='fs-1 my-2 me-2'></AiIcons.AiFillLock>
-                                <input type="password" className="form-control fs-3" placeholder="Mot de passe"></input>
+                                <AiIcons.AiFillLock className='fs-3 my-2 me-2'></AiIcons.AiFillLock>
+                                <input type="password" className="form-control fs-5" placeholder="Mot de passe"></input>
                             </div>
                             <div className='input-group justify-content-center my-3'>
-                                <button type='submit' className='form-control fw-bolder fs-3 text-primary'> Connexion</button>
+                                <button type='submit' className='form-control fw-bolder fs-4 text-primary'> Connexion</button>
                             </div>
-                            <div className='input-group justify-content-center my-3'>
-                                <Link to="scanCode" className='form-control input-group justify-content-center my-3 text-decoration-none'>
-                                    <AiIcons.AiOutlineQrcode className='fs-1 my-2 me-2'/>
-                                    <button type='button' className='form-control fw-bolder fs-3 text-primary'>Scanner le code</button>
+                            <div className='input-group justify-content-center'>
+                                <Link to="scanCode" className='form-control input-group justify-content-center text-decoration-none'>
+                                    <AiIcons.AiOutlineQrcode className='fs-3 my-2 me-2'/>
+                                    <button type='button' className='form-control fw-bolder fs-4 text-primary'>Scanner le code</button>
                                 </Link>
                             </div>
                         </form>
                         
-                        <p className='text-light fs-4'>Mot de passe oublié? cliquez ici</p>
-                        <div className='input-group justify-content-center my-3'>
-                        
-                            <button type='button' className='form-control fw-bolder fs-3 border border-light btn btn-primary text-light'>Créer un nouveau compte</button>
-                        </div>
+                        <p className='text-light fs-5'>Mot de passe oublié? cliquez ici</p>
+                        <Link to="register" className='input-group justify-content-center my-3'>
+                            <button type='button' className='col-10 fw-bolder fs-4 border border-light btn btn-primary text-light'>Créer un nouveau compte</button>
+                        </Link>
                     </div>
                 </div>
             </section>
