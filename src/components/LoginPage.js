@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import login_logo from '../img/login_secure.png';
-import Footer from './Footer';
+// import Footer from './Footer';
 import * as AiIcons from 'react-icons/ai'
 import {CgProfile} from 'react-icons/cg'
 
@@ -12,6 +12,8 @@ const LoginPage = () => {
                 <h1>Connexion</h1>
                 <h3>Accueil / Connexion</h3>
             </header> */}
+
+            {/* Connexion Form */}
             <section>
                 <h3 className='text-primary fw-bolder fs-2'>Connexion</h3>
                 <div className='m-5 p-5 row justify-content-center bg-primary'>
@@ -39,6 +41,7 @@ const LoginPage = () => {
                                 </Link>
                             </div>
                         </form>
+                        
                         <p className='text-light fs-4'>Mot de passe oublié? cliquez ici</p>
                         <div className='input-group justify-content-center my-3'>
                         

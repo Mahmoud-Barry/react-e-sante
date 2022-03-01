@@ -8,7 +8,7 @@ const Footer = () => {
         <footer className='row mt-5 bg-primary p-5'>
             <div className='col text-start mx-5'>
                 <div>
-                    <p className='fs-1 fw-bold text-uppercase text-light'>Karengue</p>
+                    <p className='fs-1 fw-bold text-uppercase text-light'>E-santé</p>
                 </div>
                 <p className='fs-5 text-light'>Lorem ipsum dolor tenetur et quia quam ut odit quis eum aliquam nihil est labore quibusdam ut enim quae.</p>
                 <form className='row'>
@@ -43,7 +43,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className='row'>
-                <p className='col-6 text-end text-light'>Copyright @Karengue 2022</p>
+                <p className='col-6 text-end text-light'>Copyright @E-santé 2022</p>
                 <p className='col-6 text-start text-light'>
                     <span className='mx-3'><BsIcons.BsFacebook/></span>
                     <span className='mx-3'><BsIcons.BsTwitter/></span>
