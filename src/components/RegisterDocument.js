@@ -3,33 +3,20 @@ import login_logo from '../img/login_secure.png';
 import * as AiIcons from 'react-icons/ai'
 import {CgProfile} from 'react-icons/cg'
 import {MdEmail} from 'react-icons/md'
+import {BiUpload} from 'react-icons/bi'
 
-const RegisterPage =()=> {
+const RegisterDocument = () => {
+    
     const [userName,setuserName]=useState("")
     const [email,setEmail]=useState("")
-    const [firstPassword,setFirstPassword]=useState("")
-    const [lastPassword,setLastPassword]=useState("")
+    const [choosedFile,setChoosedFile]=useState("")
+    const [description,setDescription]=useState("")
     const [errorMsg,setErrorMsg]=useState("")
     const [hasError,setHasError]=useState(false)
 
-    const verification=()=>{
-        // Verifier si les mot de passes correspondent
-        if(firstPassword===lastPassword){
-            return true
-        }else{
-            setHasError(true)
-            setErrorMsg('Les deux mot de passe ne correspondent pas')
-            return false
-        }
-    }
-
-    const submit=(e)=>{
+    const submit =(e)=>{
         e.preventDefault()//Block the form submitting to reload the page
 
-        if(verification()){
-            // Add the new User in the database there
-            alert('Pas encore configuré')
-        }
     }
     return (
         <div>
@@ -43,7 +30,7 @@ const RegisterPage =()=> {
                     <div className='row mt-2 col-6 col-sm-4 col-md-3 col-lg-2 m-auto'>
                         <img src={login_logo}></img>
                     </div>
-                    <h2 className='text-light '>Inscription</h2>
+                    <h2 className='text-light '>Ajouter un document</h2>
                     <div className='col-12 col-sm-9 col-md-7 col-lg-5'>
                         <form className='col-10 m-auto' onSubmit={e=>submit(e)}>
                             <div className='input-group form-control justify-content-center my3'>
@@ -55,15 +42,21 @@ const RegisterPage =()=> {
                                 <input required type="email" className="form-control fs-5" placeholder="Adresse email" value={email} onChange={e=>setEmail(e.target.value)}></input>
                             </div>
                             <div className='input-group form-control justify-content-center my-3'>
-                                <AiIcons.AiFillLock className='fs-3 my-2 me-2'></AiIcons.AiFillLock>
-                                <input required type="password" className="form-control fs-5" placeholder="Mot de passe" value={firstPassword} onChange={e=>setFirstPassword(e.target.value)}></input>
+                                <label className='row justify-content-center align-items-center'>
+                                    <div className='col-10 m-0 pe-0'>
+
+                                        <input name='file' required type="file" className=" form-control fs-5" placeholder="Choisir un fichier" value={choosedFile} onChange={e=>setChoosedFile(e.target.value)}></input>
+                                    </div>
+                                    <div className='col-2 '>
+                                        <BiUpload className='bg-primary h-100 text-light fs-1 rounded col-12'/>
+                                    </div>
+                                </label>
                             </div>
                             <div className='input-group form-control justify-content-center my-3'>
-                                <AiIcons.AiFillLock className='fs-3 my-2 me-2'></AiIcons.AiFillLock>
-                                <input required type="password" className="form-control fs-5" placeholder="Confirmer le Mot de passe" value={lastPassword} onChange={e=>setLastPassword(e.target.value)}></input>
+                                <textarea required className="form-control fs-5" placeholder="Description" value={description} onChange={e=>setDescription(e.target.value)}></textarea>
                             </div>
                             <div className='input-group justify-content-center my-3'>
-                                <button type='submit' className='col-12 btn btn-primary border border-light fw-bolder fs-4 text-light'>S'inscrire</button>
+                                <button type='submit' className='col-12 btn btn-primary border border-light fw-bolder fs-4 text-light'>Soumettre</button>
                             </div>
                         </form>
                     </div>
@@ -73,4 +66,4 @@ const RegisterPage =()=> {
     );
 };
 
-export default RegisterPage;
+export default RegisterDocument;
