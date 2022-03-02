@@ -1,6 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Routes, Route, } from "react-router-dom";
+import Home from "../home/Home";
 import './nav.css';
+import LoginPage from "../LoginPage";
+import RegisterDocument from "../RegisterDocument";
+import RegisterPage from "../RegisterPage";
+import ScanQrCode from "../ScanQRCode";
 
 const Nav =()=>{
 
@@ -56,6 +61,14 @@ const Nav =()=>{
                     </div>
                 </div>
             </nav>
+
+            <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/connexion" element={<LoginPage />} />
+            <Route path="/Documents" element={<RegisterDocument />} />
+            <Route path="/Inscription" element={<RegisterPage />} />
+            <Route path="Connexion/scanCode" element={<ScanQrCode />} />
+          </Routes>
         </div>
     )
 }    
