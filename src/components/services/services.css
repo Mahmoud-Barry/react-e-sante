@@ -1,0 +1,39 @@
+.frame{
+    font-family: Poppins;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 45px;
+    color: #1D74C4;
+    background: #F0F3F9;
+    box-shadow: 10px 4px 4px rgba(0, 0, 0, 0.25);
+    margin:4px;
+}
+
+
+
+
+.service{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 72px;
+    color: #1D74C4;
+    margin: 20px 0 20px 0;
+}
+
+.service-h4{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 72px;
+
+}
+
+.service-p{
+    font-weight: 500;
+    font-size: 14px;
+    font-family: Poppins;
+}
+
