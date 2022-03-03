@@ -1,0 +1,16 @@
+.carousel-item{
+    width: 100%;
+}
+
+.carousel-item p{
+    color: gray;
+}
+
+.w-img{
+    width: 150px;
+}
+
+.icon{
+    height: 100px;
+    width: 100px;
+}

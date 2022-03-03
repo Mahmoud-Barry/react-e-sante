@@ -1,0 +1,11 @@
+
+
+
+
+@media only screen and (min-width: 996px) {
+    .display-navbar{
+        display:flex;
+        justify-content: space-between;
+    }
+  }
+
