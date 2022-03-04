@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
+import {addDoc, collection, getFirestore } from "firebase/firestore";
 import login_logo from '../img/login_secure.png';
 import * as AiIcons from 'react-icons/ai'
 import {CgProfile} from 'react-icons/cg'
 import {MdEmail} from 'react-icons/md'
+import { app } from '../util/firebase';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 const RegisterPage =()=> {
     const [userName,setuserName]=useState("")
@@ -22,13 +25,22 @@ const RegisterPage =()=> {
             return false
         }
     }
+    const navigate= useNavigate()
 
     const submit=(e)=>{
         e.preventDefault()//Block the form submitting to reload the page
 
         if(verification()){
             // Add the new User in the database there
-            alert('Pas encore configuré')
+            addDoc(collection(getFirestore(app),"users"),
+                {
+                    userName: userName,
+                    email: email,
+                    password: firstPassword
+                }
+            ).then(()=>navigate("/"))
+            .catch(()=> alert("Inscription echoue"));
+
         }
     }
     return (
@@ -43,7 +55,7 @@ const RegisterPage =()=> {
                     <div className='row mt-2 col-6 col-sm-4 col-md-3 col-lg-2 m-auto'>
                         <img src={login_logo}></img>
                     </div>
-                    <h2 className='text-light '>Inscription</h2>
+                    <h2 className='text-light text-center'>Inscription</h2>
                     <div className='col-12 col-sm-9 col-md-7 col-lg-5'>
                         <form className='col-10 m-auto' onSubmit={e=>submit(e)}>
                             <div className='input-group form-control justify-content-center my3'>

@@ -6,14 +6,17 @@ import LoginPage from "../LoginPage";
 import RegisterDocument from "../RegisterDocument";
 import RegisterPage from "../RegisterPage";
 import ScanQrCode from "../ScanQRCode";
+import Sante from "../sante/Sante";
+import Documents from "../Documents";
+import Contact from "../contact/Contact";
 
 const Nav =()=>{
 
-
+    
     return(
         <div >
-            <nav class="navbar navbar-expand-lg navbar-light bg-light ">
-                <div class="container-fluid text-primary">
+            <nav className="navbar navbar-expand-lg navbar-light bg-light ">
+                <div className="container-fluid text-primary">
 
                     <p><Link className="navbar-brand text-primary mx-3" to="/">E-Sante</Link></p> 
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,14 +30,38 @@ const Nav =()=>{
                                 <li  className="nav-item ">
                                     <p ><Link className="nav-link text-primary px-3" to="/">Accueil</Link></p>                    
                                 </li>
-                                <li  className="nav-item">
-                                    <p ><Link className="nav-link text-primary px-3" to="/Remboursement">Remboursement</Link></p>    
-                                </li>                        
+                                  
+
+                                <li className="nav-item dropdown">
+                                    <p className="nav-link dropdown-toggle text-primary"  id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Rembourssement
+                                    </p>
+                                    <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li  className="nav-item">
+                                            <p ><Link className="nav-link text-primary px-3" to="/addPret">Faire un pret</Link></p>                    
+                                        </li>
+                                        <li  className="nav-item">
+                                            <p ><Link className="nav-link text-primary px-3" to="/Remboursement">Remboursement</Link></p>    
+                                        </li>  
+                                    </ul>
+                                </li>
+
                                 <li  className="nav-item">
                                     <p ><Link className="nav-link text-primary px-3" to="/Sante">Sante</Link></p>                    
                                 </li> 
-                                <li  className="nav-item">
-                                    <p ><Link className="nav-link text-primary px-3" to="/Documents">Documents</Link></p>                    
+
+                                <li className="nav-item dropdown">
+                                    <p className="nav-link dropdown-toggle text-primary"  id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Documents
+                                    </p>
+                                    <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li  className="nav-item">
+                                            <p ><Link className="nav-link text-primary px-3" to="/addDocuments">addDocuments</Link></p>                    
+                                        </li>
+                                        <li  className="nav-item">
+                                            <p ><Link className="nav-link text-primary px-3" to="/Documents">Documents</Link></p>                    
+                                        </li>
+                                    </ul>
                                 </li>
 
                                 <li  className="nav-item">
@@ -65,8 +92,11 @@ const Nav =()=>{
             <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/connexion" element={<LoginPage />} />
-            <Route path="/Documents" element={<RegisterDocument />} />
+            <Route path="/addDocuments" element={ <RegisterDocument /> }/>
+            <Route path="/Documents" element={ <Documents /> }/>
+            <Route path="/Contact" element={ <Contact /> }/>
             <Route path="/Inscription" element={<RegisterPage />} />
+            <Route path="/Sante" element={<Sante />} />
             <Route path="Connexion/scanCode" element={<ScanQrCode />} />
           </Routes>
         </div>
