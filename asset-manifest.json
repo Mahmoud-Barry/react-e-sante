@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/react-e-sante/static/css/main.a94c72c2.css",
+    "main.js": "/react-e-sante/static/js/main.959b0017.js",
+    "static/js/787.b050241a.chunk.js": "/react-e-sante/static/js/787.b050241a.chunk.js",
+    "static/media/routine.png": "/react-e-sante/static/media/routine.0e8c3c2d303341c7aa00.png",
+    "static/media/luis.png": "/react-e-sante/static/media/luis.680969d134800317d07c.png",
+    "static/media/alex.png": "/react-e-sante/static/media/alex.5edd84b3e329b1a6e3b9.png",
+    "static/media/myriam.png": "/react-e-sante/static/media/myriam.b1f902ba5145d022cc1e.png",
+    "static/media/evian.png": "/react-e-sante/static/media/evian.105513d4d31c1f94fa1f.png",
+    "static/media/login_secure.png": "/react-e-sante/static/media/login_secure.9d382cee9b510d476ef9.png",
+    "index.html": "/react-e-sante/index.html",
+    "main.a94c72c2.css.map": "/react-e-sante/static/css/main.a94c72c2.css.map",
+    "main.959b0017.js.map": "/react-e-sante/static/js/main.959b0017.js.map",
+    "787.b050241a.chunk.js.map": "/react-e-sante/static/js/787.b050241a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a94c72c2.css",
+    "static/js/main.959b0017.js"
+  ]
+}
